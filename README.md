@@ -8,13 +8,9 @@ This project aims to develop an AI/ML-based system to detect and classify plant 
 > User-friendly interface for uploading leaf images and receiving results.
 > Helps farmers make informed decisions for crop management.
 
-Technologies Used
-Python programming language
-
-TensorFlow/Keras (or relevant ML frameworks)
-
-OpenCV for image processing
-
-NumPy, Pandas for data handling
-
-Scikit-learn for model evaluation
+# Technologies Used :
+- Python programming language
+- TensorFlow/Keras (or relevant ML frameworks)
+- OpenCV for image processing
+- NumPy, Pandas for data handling
+- Scikit-learn for model evaluation
