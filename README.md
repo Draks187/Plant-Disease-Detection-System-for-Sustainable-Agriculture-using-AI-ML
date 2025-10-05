@@ -10,7 +10,12 @@ This project aims to develop an AI/ML-based system to detect and classify plant 
 
 # Technologies Used :
 - Python programming language
-- TensorFlow/Keras (or relevant ML frameworks)
+- TensorFlow/Keras
 - OpenCV for image processing
 - NumPy, Pandas for data handling
 - Scikit-learn for model evaluation
+
+# Usage :
+- Upload an image of a plant leaf.
+- The system will analyze the image and classify the disease present.
+- Results with the disease name and confidence score will be displayed.
