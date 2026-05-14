@@ -13,7 +13,6 @@ This project aims to develop an AI/ML-based system to detect and classify plant 
 - TensorFlow/Keras
 - OpenCV for image processing
 - NumPy, Pandas for data handling
-- Scikit-learn for model evaluation
 
 # Usage :
 - Upload an image of a plant leaf.
