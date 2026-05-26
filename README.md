@@ -74,7 +74,7 @@ A custom sequential CNN with ~26.1M trainable parameters.
 
 ## Results
 
-### Training history (5 epochs)        ← UPDATED
+### Training history (5 epochs)       
 
 | Epoch | Train Loss | Train Acc  | Val Loss | Val Acc | Val Precision | Val Recall |
 |-------|------------|------------|----------|---------|---------------|------------|
@@ -84,7 +84,7 @@ A custom sequential CNN with ~26.1M trainable parameters.
 | 4     | 0.4607     | 84.88%     | 0.5065   | 82.66%  | 85.85%        | 80.08%     |
 | **5** | **0.3747** | **87.69%** | **—**    | **—**   | **—**         | **—**      |
 
-### Test set evaluation (17,572 images)        ← UPDATED
+### Test set evaluation (17,572 images)        
 
 | Metric    | Score      |
 |-----------|------------|
