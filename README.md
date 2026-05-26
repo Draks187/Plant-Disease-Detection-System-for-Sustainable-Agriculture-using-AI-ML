@@ -94,6 +94,53 @@ A custom sequential CNN with ~26.1M trainable parameters.
 
 ---
 
+### 📊 Training Curves
+
+> Generated using `matplotlib` after model training.
+
+**Accuracy over epochs**
+```python
+plt.plot(epochs, acc,     color='green', label='Training Accuracy')
+plt.plot(epochs, val_acc, color='blue',  label='Validation Accuracy')
+plt.title('Training and Validation Accuracy')
+plt.ylabel('Accuracy')
+plt.xlabel('Epoch')
+plt.legend()
+plt.ylim(0, 1.02)
+plt.show()
+```
+![Accuracy Plot](assets/accuracy_plot.png)
+
+---
+
+**Loss over epochs**
+```python
+plt.plot(epochs, loss,     color='red',    label='Training Loss')
+plt.plot(epochs, val_loss, color='orange', label='Validation Loss')
+plt.title('Training and Validation Loss')
+plt.ylabel('Loss')
+plt.xlabel('Epoch')
+plt.legend()
+plt.show()
+```
+![Loss Plot](assets/loss_plot.png)
+
+---
+
+**Precision & Recall over epochs**
+```python
+plt.plot(epochs, precision,     color='purple', label='Training Precision')
+plt.plot(epochs, val_precision, color='violet', label='Validation Precision')
+plt.plot(epochs, recall,        color='teal',   label='Training Recall')
+plt.plot(epochs, val_recall,    color='cyan',   label='Validation Recall')
+plt.title('Precision and Recall')
+plt.ylabel('Score')
+plt.xlabel('Epoch')
+plt.legend()
+plt.show()
+```
+![Precision Recall Plot](assets/precision_recall_plot.png)
+
 ## Supported Classes
 
 38 classes across 14 plant species. Healthy classes are marked ✅.
