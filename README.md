@@ -2,7 +2,7 @@
 
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
-![Accuracy](https://img.shields.io/badge/Test%20Accuracy-89.6%25-green)
+![Accuracy](https://img.shields.io/badge/Test%20Accuracy-88.7%25-green)   ← UPDATED
 ![Classes](https://img.shields.io/badge/Classes-38-teal)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
@@ -48,19 +48,19 @@ The goal is to assist farmers and agronomists in identifying diseases early, ena
 
 A custom sequential CNN with ~26.1M trainable parameters.
 
-| Layer   | Type       | Output Shape       | Params     |
-|---------|------------|--------------------|------------|
-| Conv1   | Conv2D     | (None, 224, 224, 32) | 4,736    |
-| Pool1   | MaxPool2D  | (None, 112, 112, 32) | 0        |
-| Conv2   | Conv2D     | (None, 112, 112, 64) | 51,264   |
-| Pool2   | MaxPool2D  | (None, 56, 56, 64)   | 0        |
-| Conv3   | Conv2D     | (None, 56, 56, 128)  | 73,856   |
-| Conv4   | Conv2D     | (None, 56, 56, 256)  | 295,168  |
-| Pool3   | MaxPool2D  | (None, 28, 28, 256)  | 0        |
-| Flatten | Flatten    | (None, 200704)       | 0        |
-| Dense1  | Dense(ReLU)| (None, 128)          | 25,690,240|
-| Dense2  | Dense(ReLU)| (None, 64)           | 8,256    |
-| Output  | Dense(Softmax)| (None, 38)        | 2,470    |
+| Layer   | Type          | Output Shape           | Params     |
+|---------|---------------|------------------------|------------|
+| Conv1   | Conv2D        | (None, 224, 224, 32)   | 4,736      |
+| Pool1   | MaxPool2D     | (None, 112, 112, 32)   | 0          |
+| Conv2   | Conv2D        | (None, 112, 112, 64)   | 51,264     |
+| Pool2   | MaxPool2D     | (None, 56, 56, 64)     | 0          |
+| Conv3   | Conv2D        | (None, 56, 56, 128)    | 73,856     |
+| Conv4   | Conv2D        | (None, 56, 56, 256)    | 295,168    |
+| Pool3   | MaxPool2D     | (None, 28, 28, 256)    | 0          |
+| Flatten | Flatten       | (None, 200704)         | 0          |
+| Dense1  | Dense (ReLU)  | (None, 128)            | 25,690,240 |
+| Dense2  | Dense (ReLU)  | (None, 64)             | 8,256      |
+| Output  | Dense(Softmax)| (None, 38)             | 2,470      |
 
 **Total parameters:** 26,125,990 (~99.7 MB)
 
@@ -73,26 +73,24 @@ A custom sequential CNN with ~26.1M trainable parameters.
 
 ## Results
 
-### Training history (5 epochs)
+### Training history (5 epochs)        ← UPDATED
 
-| Epoch | Train Acc | Val Acc | Val Loss |
-|-------|-----------|---------|----------|
-| 1     | 17.3%     | 59.6%   | 1.3503   |
-| 2     | 69.1%     | 77.1%   | 0.7364   |
-| 3     | 80.8%     | 85.3%   | 0.4671   |
-| 4     | 86.4%     | 85.5%   | 0.4326   |
-| **5** | **89.2%** |**88.4%**|**0.3621**|
+| Epoch | Train Loss | Train Acc  | Val Loss | Val Acc | Val Precision | Val Recall |
+|-------|------------|------------|----------|---------|---------------|------------|
+| 1     | 1.9135     | 45.40%     | 1.3499   | 58.61%  | 71.81%        | 47.82%     |
+| 2     | 0.8831     | 72.34%     | 0.8731   | 71.64%  | 79.54%        | 65.38%     |
+| 3     | 0.5850     | 81.38%     | 0.6419   | 79.05%  | 83.25%        | 74.74%     |
+| 4     | 0.4607     | 84.88%     | 0.5065   | 82.66%  | 85.85%        | 80.08%     |
+| **5** | **0.3747** | **87.69%** | **—**    | **—**   | **—**         | **—**      |
 
-### Test set evaluation (17,572 images)
+### Test set evaluation (17,572 images)        ← UPDATED
 
-| Metric    | Score  |
-|-----------|--------|
-| Loss      | 0.3207 |
-| Accuracy  | 89.58% |
-| Precision | 91.79% |
-| Recall    | 87.92% |
-
----
+| Metric    | Score      |
+|-----------|------------|
+| Loss      | 0.3464     |
+| Accuracy  | **88.74%** |
+| Precision | **91.19%** |
+| Recall    | **86.75%** |
 
 ### 📊 Training Curves
 
@@ -140,6 +138,8 @@ plt.legend()
 plt.show()
 ```
 ![Precision Recall Plot](assets/precision_recall_plot.png)
+
+---
 
 ## Supported Classes
 
@@ -223,10 +223,14 @@ Run the notebook in Google Colab. Mount your Drive, extract the dataset zip, and
 
 ```
 plant-disease-detection/
-├── PDDS.keras                    # Final saved model (all epochs)
-├── best_model.keras              # Best checkpoint (lowest val_loss)
-├── plant_disease_CNN.ipynb       # Training notebook (Google Colab)
-└── README.md                     # Project documentation
+├── PDDS.keras                        # Final saved model (all epochs)
+├── best_model.keras                  # Best checkpoint (lowest val_loss)
+├── plant_disease_CNN.ipynb           # Training notebook (Google Colab)
+├── assets/
+│   ├── accuracy_plot.png             # Training vs validation accuracy graph
+│   ├── loss_plot.png                 # Training vs validation loss graph
+│   └── precision_recall_plot.png     # Precision & recall over epochs
+└── README.md                         # Project documentation
 ```
 
 ---
