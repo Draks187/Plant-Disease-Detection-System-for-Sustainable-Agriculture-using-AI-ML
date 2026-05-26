@@ -2,9 +2,10 @@
 
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
-![Accuracy](https://img.shields.io/badge/Test%20Accuracy-88.7%25-green)   ← UPDATED
+![Accuracy](https://img.shields.io/badge/Test%20Accuracy-88.7%25-green)
 ![Classes](https://img.shields.io/badge/Classes-38-teal)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
 
 A deep learning system that classifies plant leaf diseases across 14 crop species into 38 categories. Built to support early disease detection in agriculture, reducing crop loss and minimizing unnecessary pesticide use.
 
